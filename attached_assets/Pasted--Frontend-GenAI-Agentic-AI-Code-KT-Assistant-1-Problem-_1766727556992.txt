@@ -1,0 +1,271 @@
+# Frontend GenAI + Agentic AI Code KT Assistant
+
+## 1. Problem Statement
+
+In most frontend projects, onboarding a new developer or transferring knowledge (Code KT) is:
+
+* Time-consuming
+* Person-dependent
+* Poorly documented
+* Quickly outdated
+
+Developers often need to:
+
+* Understand framework, architecture, and design patterns
+* Navigate large codebases
+* Identify files for a specific feature or change
+* Explain code flows repeatedly to new team members
+
+This solution aims to **automate frontend code KT** using **GenAI + Agentic AI**, reducing manual effort and improving consistency.
+
+---
+
+## 2. Objective
+
+Build a **configurable GenAI Agent** that can be plugged into **any existing frontend project**, which:
+
+* Reads and understands the entire codebase
+* Explains architecture and flows visually and conversationally
+* Acts as an interactive Code KT assistant
+* Supports developer Q&A about code and features
+
+Initial scope focuses on **Frontend only**.
+
+---
+
+## 3. Key Capabilities (High-Level)
+
+### 3.1 Automated Codebase Understanding
+
+* Scan and index entire frontend repository
+* Identify:
+
+  * Framework(s) used (Angular / React / Vue / etc.)
+  * Language (TypeScript / JavaScript)
+  * Build tools (Webpack, Vite, etc.)
+
+### 3.2 Architecture & Design Explanation
+
+* Detect and explain:
+
+  * Design patterns (MVC, MVVM, Flux, Redux, Component-based, etc.)
+  * State management approach
+  * Routing strategy
+  * Component hierarchy
+
+### 3.3 Visual Diagrams & Workflows
+
+* Auto-generate diagrams:
+
+  * Application architecture
+  * Module-level workflows
+  * Component interaction flows
+* Generate graphs for:
+
+  * Number of directives
+  * Filters / pipes usage
+  * Components per module
+  * Dependency relationships
+
+### 3.4 Interactive Code KT (Chat-based)
+
+* Conversational GenAI interface where developers can ask:
+
+  * "Explain this project from scratch"
+  * "Where is the login flow implemented?"
+  * "Which files should I modify to change dashboard behavior?"
+* Agent responds with:
+
+  * File paths
+  * Flow explanation
+  * Relevant code snippets
+
+### 3.5 Friendly Code Tour Mode
+
+* Step-by-step guided walkthrough:
+
+  1. Project overview
+  2. Folder structure
+  3. Core modules
+  4. Shared utilities
+  5. Common flows
+
+---
+
+## 4. Functional Requirements
+
+### 4.1 Project Configuration
+
+* Agent should be configurable per project using:
+
+  * Project root path
+  * Framework selection (auto-detect preferred)
+  * Optional configuration file (agent.config.json)
+
+### 4.2 Code Ingestion & Indexing
+
+* Read:
+
+  * Source code files
+  * Configuration files (package.json, angular.json, etc.)
+* Build:
+
+  * Code graph
+  * Dependency map
+  * Symbol index
+
+### 4.3 Framework-Specific Analysis (Frontend)
+
+#### Angular (initial priority)
+
+* Detect:
+
+  * Modules
+  * Components
+  * Directives
+  * Pipes (filters)
+  * Services
+* Count and list:
+
+  * Directives
+  * Pipes
+  * Components per module
+
+#### React / Vue (future-ready)
+
+* Component tree
+* Hooks usage
+* State management patterns
+
+### 4.4 Library & Dependency Analysis
+
+* List all libraries from package.json
+* Categorize:
+
+  * UI libraries
+  * State management
+  * Utility libraries
+  * Testing libraries
+* Highlight heavy or critical dependencies
+
+### 4.5 Flow & Feature Tracing
+
+* Given a feature name or user flow:
+
+  * Identify entry point
+  * Trace components, services, routes
+  * Explain execution flow in simple language
+
+### 4.6 Diagram & Graph Generation
+
+* Generate:
+
+  * Architecture diagrams
+  * Flow diagrams
+  * Statistical graphs
+* Diagrams should be:
+
+  * Auto-generated
+  * Exportable (PNG / SVG)
+
+### 4.7 GenAI Chat Assistant
+
+* Natural language interaction
+* Context-aware (entire codebase)
+* Example queries:
+
+  * "Explain folder structure"
+  * "How authentication works"
+  * "Which files handle API calls?"
+
+---
+
+## 5. Agentic AI Behavior
+
+### 5.1 Autonomous Agent Workflow
+
+1. Scan project
+2. Identify framework and structure
+3. Build internal understanding
+4. Generate explanations and visuals
+5. Answer questions dynamically
+
+### 5.2 Multi-Agent (Optional Future)
+
+* Analyzer Agent – scans code
+* Diagram Agent – generates visuals
+* Chat Agent – handles Q&A
+* Metrics Agent – computes stats
+
+---
+
+## 6. Non-Functional Requirements
+
+* Plug-and-play for any frontend project
+* Read-only access to codebase
+* Fast initial indexing
+* Secure (no code leakage)
+* Scalable for large repos
+
+---
+
+## 7. Out of Scope (Phase 1)
+
+* Backend code analysis
+* Code modification or auto-fix
+* CI/CD integration
+* Production deployment analysis
+
+---
+
+## 8. Expected Benefits
+
+* 70–80% reduction in manual Code KT effort
+* Faster onboarding of developers
+* Consistent knowledge transfer
+* Living documentation that stays updated
+
+---
+
+## 9. Example User Journey (Code KT Scenario)
+
+1. New developer joins project
+2. Runs agent against frontend repo
+3. Agent provides:
+
+   * Project overview
+   * Architecture diagrams
+   * Folder walkthrough
+4. Developer asks questions via chat
+5. Agent explains flows and files interactively
+
+---
+
+## 10. Future Enhancements
+
+* Backend support
+* Code change impact analysis
+* Voice-based KT
+* Integration with Jira / Confluence
+* Auto-recorded KT sessions
+
+---
+
+## 11. Success Metrics
+
+* Time to onboard new developer
+* Number of KT sessions avoided
+* Developer satisfaction score
+* Accuracy of explanations
+
+---
+
+## 12. Conclusion
+
+This GenAI + Agentic AI solution acts as a **virtual senior developer**, providing:
+
+* Automated code understanding
+* Visual architecture explanations
+* Interactive and friendly Code KT
+
+It transforms static codebases into **living, explainable systems**.
